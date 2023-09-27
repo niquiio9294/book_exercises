@@ -1,11 +1,13 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Ship():
+class Ship(Sprite):
     """Class to created a Ship."""
 
     def __init__(self, screen):
         """Initialize the ship and set its starting position."""
+        super(Ship, self).__init__()
         self.screen = screen  # aca definimos la pantalla en la que se colocara la nave
         # Load the ship image and get its rect.
         self.image = pygame.image.load("images/ship.bmp")  # aca cargamos la imagen

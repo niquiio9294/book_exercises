@@ -34,11 +34,11 @@ def run_game():
 
     # Start the main loop for the game.
     while True:
-        gf.chack_event(ai_settings,screen, stats, play_button, ship_1, aliens, bullets) # verificamos todos los eventos posibles al tocar una tecla.
+        gf.chack_event(ai_settings,screen, stats, sb, play_button, ship_1, aliens, bullets) # verificamos todos los eventos posibles al tocar una tecla.
         if stats.game_active: # las siguientes partes son las que tienen q estar activas solo si el juego esta activo
             ship_1.update()  # hace que la nave se mueva cuando se presiona una tecla.
-            gf.update_bullets(ai_settings, screen, ship_1, aliens, bullets)
-            gf.update_aliens(ai_settings, stats, screen, ship_1, aliens, bullets)
+            gf.update_bullets(ai_settings, screen, stats, sb, ship_1, aliens, bullets)
+            gf.update_aliens(ai_settings, screen, stats, sb, ship_1, aliens, bullets)
         gf.update_screen(ai_settings,screen,stats, sb, ship_1, aliens, bullets, play_button) #actuliza la pantalla a medida que ocurre un evento.
 
 
