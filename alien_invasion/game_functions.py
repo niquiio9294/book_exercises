@@ -234,12 +234,12 @@ def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
 
     # Look for aliens-ship collisions.
     if pygame.sprite.spritecollideany(ship, aliens):
-        ship_hit(ai_settings, stats, screen, sb, ship, aliens, bullets)
+        ship_hit(ai_settings,screen,stats , sb, ship, aliens, bullets)
 # la funcion spritecollideany() revisa si un sprite (ship) y un grupo (aliens) colsionan.
 # si lo hacen, este metodo detiene el loop.
 
     # Look for aliens hitting the bottom of the screen.
-    check_aliens_bottom(ai_settings, stats, screen, sb, ship, aliens, bullets)
+    check_aliens_bottom(ai_settings,screen ,stats , sb, ship, aliens, bullets)
 
 
 def check_high_score(stats, sb):

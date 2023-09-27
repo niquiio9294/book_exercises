@@ -10,7 +10,7 @@ class Ship(Sprite):
         super(Ship, self).__init__()
         self.screen = screen  # aca definimos la pantalla en la que se colocara la nave
         # Load the ship image and get its rect.
-        self.image = pygame.image.load("images/ship.bmp")  # aca cargamos la imagen
+        self.image = pygame.image.load("./images/ship.bmp")  # aca cargamos la imagen
         self.rect = self.image.get_rect()  # convierte la imagen en un rectangulo, esto nos permite usar coordenadas (x,y) para posicionarlo.
         self.screen_rect = screen.get_rect() #hacemos lo mismo con la pantalla
 
